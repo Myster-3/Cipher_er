@@ -81,7 +81,7 @@ def generate_keys():
     d=d[random.randrange(int(len(d)/2),len(d))]
     return e,d,N
 
-def encrypt_public_key(public_key,flag):
+def encrypt_keys(public_key,flag):
     key=int(public_key.split('!_')[-1])
     other_key='!'.join(public_key.split('!_')[0:-1])
     final_key=''
@@ -112,9 +112,13 @@ def get_keys():
     public_keys.append(str(n_k))
     print(public_keys,private_keys)
     public_keys='_'.join(public_keys)
+    
+    n_k=int(random.randrange(1,23))
     private_keys.append(str(-1*n_k))
+    
     private_keys='_'.join(private_keys)
-    public_keys=encrypt_public_key(public_keys,0)
+    public_keys=encrypt_keys(public_keys,0)
+    private_keys=encrypt_keys(private_keys,1)
     print(public_keys)
     print(private_keys)
     return public_keys,private_keys
