@@ -28,7 +28,7 @@ def encrypt_decrypt(text,key):
                 character=chr(ord(character)-int(N/10))
 
 
-            if (ord(character) in range(32,47,1)) or(ord(character) in range(58,64,1)) or (ord(character) in range(91,96,1)) or(ord(character) in range(123,126,1)) and flag==1:
+            if (ord(character) in range(32,57,1)) or(ord(character) in range(58,64,1)) or (ord(character) in range(91,96,1)) or(ord(character) in range(123,126,1)) and flag==1:
                 pass
             else: 
                 if character.isupper()==character: 
