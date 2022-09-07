@@ -8,12 +8,13 @@ def encrypt_decrypt(text,key):
     t_flag=int(flag.split('_')[-1])
 
     if t_flag<0:
+        key=g_k.encrypt_keys('!'.join(key),0)
         flag=2
     else:
-        key=g_k.encrypt_public_key('!'.join(key),1)
-        key=key.split('!')
+        key=g_k.encrypt_keys('!'.join(key),1)
         flag=1
     
+    key=key.split('!')
     text=text[::-1]
     text=text.split('\n')
 
@@ -21,7 +22,7 @@ def encrypt_decrypt(text,key):
         t_a=key[t%5]
         a=t_a.split('_')[0]
         N=t_a.split('_')[1]
-        
+        print(a,N)
         t_a=text[t]
         for character in t_a:
             N=int(N)
