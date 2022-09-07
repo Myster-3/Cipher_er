@@ -41,3 +41,7 @@ is There Fore most secured place for Encrypting and Decrypting messages.
 
 ### Developed by: Myster_3
 '''
+image = Image.open('assets\image.png')
+newsize = (300, 300)
+image = image.resize(newsize)
+st.image(image)
