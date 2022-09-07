@@ -1,4 +1,3 @@
-
 import Generic.generate_keys as g_k
 
 def encrypt_decrypt(text,key):
@@ -31,7 +30,7 @@ def encrypt_decrypt(text,key):
                 character=chr(ord(character)-int(N/10))
 
 
-            if (ord(character) in range(32,57,1)) or(ord(character) in range(58,64,1)) or (ord(character) in range(91,96,1)) or(ord(character) in range(123,126,1)) and flag==1:
+            if (ord(character) in range(32,58,1)) or(ord(character) in range(58,64,1)) or (ord(character) in range(91,96,1)) or(ord(character) in range(123,126,1)) and flag==1:
                 pass
             else: 
                 if character.isupper()==character: 
@@ -55,5 +54,3 @@ def encrypt_decrypt(text,key):
     out_text=out_text[::-1]
     out_text=out_text[1:]
     return out_text
-    
-

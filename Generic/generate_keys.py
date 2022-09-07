@@ -118,5 +118,3 @@ def get_keys():
     print(public_keys)
     print(private_keys)
     return public_keys,private_keys
-
-
