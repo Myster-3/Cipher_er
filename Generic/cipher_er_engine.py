@@ -1,4 +1,5 @@
 
+import Generic.generate_keys as g_k
 
 def encrypt_decrypt(text,key):
     
@@ -9,7 +10,9 @@ def encrypt_decrypt(text,key):
 
     if t_flag<0:
         flag=2
-    else: 
+    else:
+        key=g_k.encrypt_public_key('!'.join(key),1)
+        key=key.split('!')
         flag=1
     
     text=text[::-1]
