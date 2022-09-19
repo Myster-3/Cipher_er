@@ -67,10 +67,10 @@ def get_private_key_1(e,phi,N):
 def generate_keys():
     while True: 
         p_n_handle=prime_numbers_handling()
-        total_prime_numbers=p_n_handle.generate_prime_upto_n(100)
+        total_prime_numbers=p_n_handle.generate_prime_upto_n(200)
         p,q=get_p_and_q(total_prime_numbers)
         N=p*q 
-        if N>5000:
+        if N>1000:
             break
         
     phi=(p-1)*(q-1)
@@ -97,7 +97,7 @@ def encrypt_keys(public_key,flag):
 def get_keys():
     public_keys=[]
     private_keys=[]
-    for i in range(0,5):
+    for i in range(0,3):
         public_key,private_key,N=generate_keys()
         
         public_keys.append(str(public_key))

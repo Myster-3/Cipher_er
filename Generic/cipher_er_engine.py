@@ -19,7 +19,7 @@ def encrypt_decrypt(text,key):
     text=text.split('\n')
 
     for t in range(len(text)): 
-        t_a=key[t%5]
+        t_a=key[t%3]
         a=t_a.split('_')[0]
         N=t_a.split('_')[1]
         print(a,N)
