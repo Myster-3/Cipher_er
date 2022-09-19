@@ -3,7 +3,6 @@ import Generic.generate_keys as g_k
 def encrypt_decrypt(text,key):
     
     out_text=''
-    key=key.replace(' ','')
     key=key.split('!')
     flag=key[-1]
     t_flag=int(flag.split('_')[-1])
