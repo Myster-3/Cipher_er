@@ -70,7 +70,7 @@ def generate_keys():
         total_prime_numbers=p_n_handle.generate_prime_upto_n(100)
         p,q=get_p_and_q(total_prime_numbers)
         N=p*q 
-        if N>8000:
+        if N>5000:
             break
         
     phi=(p-1)*(q-1)
