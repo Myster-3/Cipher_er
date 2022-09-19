@@ -67,10 +67,10 @@ def get_private_key_1(e,phi,N):
 def generate_keys():
     while True: 
         p_n_handle=prime_numbers_handling()
-        total_prime_numbers=p_n_handle.generate_prime_upto_n(200)
+        total_prime_numbers=p_n_handle.generate_prime_upto_n(150)
         p,q=get_p_and_q(total_prime_numbers)
         N=p*q 
-        if N>1000:
+        if N>2500:
             break
         
     phi=(p-1)*(q-1)
